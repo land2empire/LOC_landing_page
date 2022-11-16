@@ -55,6 +55,7 @@
 				}
 			});
 			function clickPlayButton() {
+				rdt('track', 'SignUp');
 				gtag('event', 'click_play_button', {
 					'event_category': 'navigation'
 				});
@@ -117,8 +118,8 @@
 									<div class="full">
 										<div id="image03" class="image full" data-position="top">
 											<span class="frame">
-												<video src="assets/images/image03.webm" type="video/webm">
-												<!-- <img src="assets/images/image03.gif" alt="" /> -->
+												
+												<img src="assets/images/image03.gif" alt="" /> 
 											</span>
 										</div>
 									</div>
@@ -133,7 +134,7 @@
 										<h2 id="text01" class="style7"><span class="p">Earn GEMs<br />by taking on fun quests</span></h2>
 										<p id="text10" class="style6">If you&#039;re a casual gamer, a fan of our game or a KOL/influencer, you can earn points with this program and change it to in-game rewards*:</p>
 										<div id="image07" class="image">
-											<span class="frame"><img src="assets/images/image07.webp" alt="" /></span>
+											<span class="frame"><img src="assets/images/image07.gif" alt="" /></span>
 										</div>
 										<ul id="buttons02" class="style2 buttons">
 											<li>
@@ -199,9 +200,8 @@
 									<div>
 										<div id="image09" class="image">
 											<span class="frame">
-												<video src="assets/images/image03.webm" type="video/webm" alt="Land of Clans forge building upgrade" autoplay="auto" width="345" height="420">
 												
-												<!-- <img src="assets/images/image09.webm" alt="Land of Clans forge building upgrade" /> --> 
+												<img src="assets/images/image09.webm" alt="Land of Clans forge building upgrade" /> 
 											</span>
 										</div>
 										<div id="image13" class="image">
@@ -401,5 +401,15 @@
 			twq('config','ocog2');
 			</script>
 		<!-- End Twitter conversion tracking base code -->
+		
+		<!-- Reddit Pixel -->
+<script>
+!function(w,d){if(!w.rdt){var p=w.rdt=function(){p.sendEvent?p.sendEvent.apply(p,arguments):p.callQueue.push(arguments)};p.callQueue=[];var t=d.createElement("script");t.src="https://www.redditstatic.com/ads/pixel.js",t.async=!0;var s=d.getElementsByTagName("script")[0];s.parentNode.insertBefore(t,s)}}(window,document);rdt('init','t2_ubjvcoqp', {"optOut":false,"useDecimalCurrencyValues":true,"aaid":"<AAID-HERE>","externalId":"<EXTERNAL-ID-HERE>","idfa":"<IDFA-HERE>"});rdt('track', 'PageVisit');
+</script>
+<!-- DO NOT MODIFY UNLESS TO REPLACE A USER IDENTIFIER -->
+<!-- End Reddit Pixel -->
+		<script>
+  rdt('track', 'ViewContent');
+</script>
 	</body>
 </html>
