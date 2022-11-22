@@ -1,3 +1,4 @@
+
 <!DOCTYPE HTML>
 <html lang="en">
 	<head>
@@ -61,7 +62,7 @@
 				});
 			}
 		</script>
-	</head>
+</head>
 	<body>
 		<div id="wrapper">
 			<div id="main">
@@ -81,6 +82,8 @@
 													<a href="https://t.me/landofclans_en" class="thumbnail"><span class="frame"><img src="assets/images/gallery01/f15f5cea.svg" alt="Land of Clans Telegram" /></span></a>
 												</li><li>
 													<a href="https://loc.crew3.xyz/questboard" class="thumbnail"><span class="frame"><img src="assets/images/gallery01/039b5852.svg" alt="crew3" /></span></a>
+												</li><li>
+													<a href="https://play.landofclans.io/" class="thumbnail"><span class="frame"><img src="assets/images/gallery01/bde71b76.png" alt="Play now!" /></span></a>
 												</li>
 											</ul>
 										</div>
@@ -97,9 +100,14 @@
 								</div>
 							</div>
 						</div>
-						<div id="container16" class="container default">
+						<div id="container16" class="container default full">
 							<div class="wrapper">
 								<div class="inner">
+									<ul id="buttons09" class="style3 buttons">
+										<li>
+											<a href="https://play.landofclans.io" class="button n01">Start playing now</a>
+										</li>
+									</ul>
 								</div>
 							</div>
 						</div>
@@ -108,19 +116,15 @@
 								<div class="inner">
 									<div>
 										<h1 id="text03" class="style1">The truly fair play-and-earn game on WAX</h1>
-										<ul id="buttons06" class="style1 buttons">
+											<ul id="buttons06" class="style1 buttons">
 											<li>
 												<a href="https://play.landofclans.io" class="button n01" onclick="clickPlayButton(); return true">Play now</a>
 											</li>
 										</ul>
-										<div id="list01" class="list"><ul><li><p>No fee to start play and earn. Free-to-play enter</p></li><li><p>No need to wait for a launch. The game is ready</p></li><li><p>No limits to play. PC and mobile devices adapted browser game</p></li><li><p>Enjoy the game and use an option to earn from it at the same time</p></li></ul></div>
 									</div>
 									<div class="full">
 										<div id="image03" class="image full" data-position="top">
-											<span class="frame">
-												
-												<img src="assets/images/image03.gif" alt="" /> 
-											</span>
+											<span class="frame"><img src="assets/images/image03.gif" alt="" /></span>
 										</div>
 									</div>
 								</div>
@@ -134,7 +138,7 @@
 										<h2 id="text01" class="style7"><span class="p">Earn GEMs<br />by taking on fun quests</span></h2>
 										<p id="text10" class="style6">If you&#039;re a casual gamer, a fan of our game or a KOL/influencer, you can earn points with this program and change it to in-game rewards*:</p>
 										<div id="image07" class="image">
-											<span class="frame"><img src="assets/images/image07.gif" alt="" /></span>
+											<span class="frame"><img src="assets/images/image07.png" alt="" /></span>
 										</div>
 										<ul id="buttons02" class="style2 buttons">
 											<li>
@@ -203,7 +207,7 @@
 												
 												<img src="assets/images/image09.gif" alt="Land of Clans forge building upgrade" /> 
 											</span>
-										</div>
+									</div>
 										<div id="image13" class="image">
 											<span class="frame"><img src="assets/images/image13.webp" alt="Land of Clans in-game resources" /></span>
 										</div>
@@ -337,7 +341,7 @@
 		for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
 		k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
 		(window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
-
+		
 		ym(90514339, "init", {
 		clickmap:true,
 		trackLinks:true,
@@ -347,6 +351,12 @@
 		</script>
 		<noscript><div><img src="https://mc.yandex.ru/watch/90514339" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
 		<!-- /Yandex.Metrika counter -->
+		
+		<script>
+		(()=> {
+		$('a').attr('href', (n, old) => old + location.search);
+		})()
+		</script>
 		<!-- Meta Pixel Code -->
 		<script>
 		!function(f,b,e,v,n,t,s)
