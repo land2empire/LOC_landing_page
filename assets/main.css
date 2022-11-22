@@ -234,6 +234,36 @@ body.is-instant:after {
 	transition: none !important;
 }
 
+@keyframes onvisible-slide-left {
+	0% {
+		visibility: hidden;
+		transform: translateX(100vw);
+	}
+
+	1% {
+		visibility: visible;
+	}
+
+	100% {
+		transform: translateX(0);
+	}
+}
+
+@keyframes onvisible-slide-right {
+	0% {
+		visibility: hidden;
+		transform: translateX(-100vw);
+	}
+
+	1% {
+		visibility: visible;
+	}
+
+	100% {
+		transform: translateX(0);
+	}
+}
+
 .gallery .inner {
 	display: inline-block;
 	max-width: 100%;
@@ -310,7 +340,7 @@ body.is-instant:after {
 
 #gallery01 ul li .thumbnail {
 	display: block;
-	transition: none;
+	transition: transform 0.25s ease, z-index 0.25s ease;
 }
 
 #gallery01 ul li img {
@@ -318,8 +348,9 @@ body.is-instant:after {
 	max-height: 2rem;
 }
 
-#gallery01 ul li .thumbnail img {
-	transition: none;
+#gallery01 ul li .thumbnail:hover {
+	transform: scale(1.1125);
+	z-index: 1;
 }
 
 #gallery02 {
@@ -408,7 +439,7 @@ body.is-instant:after {
 #container18 {
 	display: flex;
 	width: 100%;
-	align-items: center;
+	align-items: flex-start;
 	justify-content: center;
 	background-color: rgba(0,0,0,0.671);
 }
@@ -424,6 +455,7 @@ body.is-instant:after {
 #container18 > .wrapper > .inner {
 	--gutters: 2rem;
 	--padding-horizontal: 2rem;
+	--padding-vertical: 1rem;
 	padding: var(--padding-vertical) var(--padding-horizontal);
 }
 
@@ -554,7 +586,7 @@ body.is-instant:after {
 #container01 {
 	display: flex;
 	width: 100%;
-	min-height: 17rem;
+	min-height: 15rem;
 	align-items: center;
 	justify-content: center;
 	background-image: linear-gradient(180deg, rgba(0,0,0,0.671) 0%, transparent 100%);
@@ -569,7 +601,6 @@ body.is-instant:after {
 
 #container01 > .wrapper > .inner {
 	--gutters: 2rem;
-	--padding-horizontal: 2rem;
 	padding: var(--padding-vertical) var(--padding-horizontal);
 }
 
@@ -673,7 +704,7 @@ body.is-instant:after {
 
 #container01.columns > .wrapper > .inner > .full {
 	align-self: stretch;
-	min-height: 17rem;
+	min-height: 15rem;
 }
 
 #container01.columns > .wrapper > .inner > .full:first-child {
@@ -701,7 +732,7 @@ body.is-instant:after {
 #container16 {
 	display: flex;
 	width: 100%;
-	min-height: 30rem;
+	min-height: 22rem;
 	align-items: center;
 	justify-content: center;
 	background-color: transparent;
@@ -813,7 +844,7 @@ body.is-instant:after {
 
 #container16.columns > .wrapper > .inner > .full {
 	align-self: stretch;
-	min-height: 30rem;
+	min-height: 22rem;
 }
 
 #container16.columns > .wrapper > .inner > .full:first-child {
@@ -843,9 +874,9 @@ body.is-instant:after {
 	width: 100%;
 	align-items: center;
 	justify-content: center;
-	background-color: rgba(235,242,202,0.871);
-	-webkit-backdrop-filter: blur(0.35rem);
-	backdrop-filter: blur(0.35rem);
+	background-color: rgba(235,242,202,0.741);
+	-webkit-backdrop-filter: blur(0.05rem);
+	backdrop-filter: blur(0.05rem);
 	border-color: #61C261;
 	border-style: solid;
 	border-width: 2px;
@@ -1187,9 +1218,9 @@ body.is-instant:after {
 	width: 100%;
 	align-items: center;
 	justify-content: center;
-	background-color: rgba(235,242,202,0.871);
-	-webkit-backdrop-filter: blur(0.35rem);
-	backdrop-filter: blur(0.35rem);
+	background-color: rgba(235,242,202,0.741);
+	-webkit-backdrop-filter: blur(0.05rem);
+	backdrop-filter: blur(0.05rem);
 	border-color: #61C261;
 	border-style: solid;
 	border-width: 2px;
@@ -1351,9 +1382,9 @@ body.is-instant:after {
 	width: 100%;
 	align-items: center;
 	justify-content: center;
-	background-color: rgba(235,242,202,0.871);
-	-webkit-backdrop-filter: blur(0.35rem);
-	backdrop-filter: blur(0.35rem);
+	background-color: rgba(235,242,202,0.741);
+	-webkit-backdrop-filter: blur(0.05rem);
+	backdrop-filter: blur(0.05rem);
 	border-color: #61C261;
 	border-style: solid;
 	border-width: 2px;
@@ -2370,7 +2401,7 @@ body.is-instant:after {
 }
 
 #image01 .frame {
-	width: 33rem;
+	width: 32rem;
 	transition: none;
 }
 
@@ -2785,7 +2816,7 @@ h1.style3 span.p:nth-child(n + 2), h2.style3 span.p:nth-child(n + 2), h3.style3 
 	direction: var(--site-language-direction);
 	overflow: hidden;
 	text-overflow: ellipsis;
-	transition: color 0.25s ease, background-color 0.25s ease, border-color 0.25s ease;
+	transition: transform 0.25s ease, color 0.25s ease, background-color 0.25s ease, border-color 0.25s ease;
 }
 
 .buttons.style2 .button {
@@ -2799,6 +2830,10 @@ h1.style3 span.p:nth-child(n + 2), h2.style3 span.p:nth-child(n + 2), h3.style3 
 
 .buttons.style2 .button:hover {
 	background-color: #AE0000 !important;
+}
+
+.buttons.style2 li a:hover {
+	transform: scale(1.1125);
 }
 
 #buttons02 .n01 {
@@ -2832,10 +2867,11 @@ h1.style3 span.p:nth-child(n + 2), h2.style3 span.p:nth-child(n + 2), h3.style3 
 	font-size: 2em;
 	font-weight: 900;
 	border-radius: 1.25rem;
+	box-shadow: 0rem 1rem 2rem 0rem rgba(69,0,0,0.502);
 	direction: var(--site-language-direction);
 	overflow: hidden;
 	text-overflow: ellipsis;
-	transition: color 0.25s ease, background-color 0.25s ease, border-color 0.25s ease;
+	transition: transform 0.25s ease, color 0.25s ease, background-color 0.25s ease, border-color 0.25s ease;
 }
 
 .buttons.style1 .button {
@@ -2849,6 +2885,10 @@ h1.style3 span.p:nth-child(n + 2), h2.style3 span.p:nth-child(n + 2), h3.style3 
 
 .buttons.style1 .button:hover {
 	background-color: #AE0000 !important;
+}
+
+.buttons.style1 li a:hover {
+	transform: scale(1.1125);
 }
 
 #buttons04 .n01 {
@@ -2893,7 +2933,7 @@ h1.style3 span.p:nth-child(n + 2), h2.style3 span.p:nth-child(n + 2), h3.style3 
 	direction: var(--site-language-direction);
 	overflow: hidden;
 	text-overflow: ellipsis;
-	transition: color 0.25s ease, background-color 0.25s ease, border-color 0.25s ease;
+	transition: transform 0.25s ease, color 0.25s ease, background-color 0.25s ease, border-color 0.25s ease;
 }
 
 #buttons05 .button {
@@ -2909,8 +2949,59 @@ h1.style3 span.p:nth-child(n + 2), h2.style3 span.p:nth-child(n + 2), h3.style3 
 	background-color: #AE0000 !important;
 }
 
+#buttons05 li a:hover {
+	transform: scale(1.1125);
+}
+
 #buttons05 .n01 {
 	background-color: #CE443E;
+}
+
+.buttons.style3 {
+	justify-content: center;
+	gap: 0rem;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+
+.buttons.style3 li a {
+	display: inline-block;
+	width: 30rem;
+	height: 5rem;
+	line-height: 5rem;
+	padding: 0 0.5rem;
+	vertical-align: middle;
+	text-transform: uppercase;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 2.25em;
+	font-weight: 900;
+	border-radius: 1.25rem;
+	box-shadow: 0rem 1rem 2rem 0rem rgba(69,0,0,0.502);
+	direction: var(--site-language-direction);
+	overflow: hidden;
+	text-overflow: ellipsis;
+	transition: transform 0.5s ease, color 0.5s ease, background-color 0.5s ease, border-color 0.5s ease;
+}
+
+.buttons.style3 .button {
+	background-color: #CE443E;
+	color: #FFFFFF;
+	background-image: linear-gradient(192deg, #450000 0%, rgba(206,68,62,0.008) 100%);
+	background-position: 0% 0%;
+	background-repeat: repeat;
+	background-size: cover;
+}
+
+.buttons.style3 .button:hover {
+	background-color: #AE0000 !important;
+}
+
+.buttons.style3 li a:hover {
+	transform: scale(1.2);
+}
+
+#buttons09 .n01 {
+	background-color: rgba(206,68,62,0.988);
 }
 
 #buttons06 .n01 {
@@ -3239,6 +3330,7 @@ h1.style3 span.p:nth-child(n + 2), h2.style3 span.p:nth-child(n + 2), h3.style3 
 	#container18 > .wrapper > .inner {
 		--gutters: 2rem;
 		--padding-horizontal: 2rem;
+		--padding-vertical: 1rem;
 	}
 	
 	#container18.columns > .wrapper > .inner {
@@ -3326,7 +3418,7 @@ h1.style3 span.p:nth-child(n + 2), h2.style3 span.p:nth-child(n + 2), h3.style3 
 	}
 	
 	#container01 {
-		min-height: 12.75rem;
+		min-height: 11.25rem;
 	}
 	
 	#container01:not(:first-child) {
@@ -3335,7 +3427,6 @@ h1.style3 span.p:nth-child(n + 2), h2.style3 span.p:nth-child(n + 2), h3.style3 
 	
 	#container01 > .wrapper > .inner {
 		--gutters: 2rem;
-		--padding-horizontal: 2rem;
 	}
 	
 	#container01.columns > .wrapper > .inner {
@@ -3413,7 +3504,7 @@ h1.style3 span.p:nth-child(n + 2), h2.style3 span.p:nth-child(n + 2), h3.style3 
 	}
 	
 	#container01.columns > .wrapper > .inner > .full {
-		min-height: 12.75rem;
+		min-height: 11.25rem;
 	}
 	
 	#container01.columns > .wrapper > .inner > .full > .full:first-child:last-child {
@@ -3427,7 +3518,7 @@ h1.style3 span.p:nth-child(n + 2), h2.style3 span.p:nth-child(n + 2), h3.style3 
 	}
 	
 	#container16 {
-		min-height: 22.5rem;
+		min-height: 16.5rem;
 	}
 	
 	#container16 > .wrapper > .inner {
@@ -3510,7 +3601,7 @@ h1.style3 span.p:nth-child(n + 2), h2.style3 span.p:nth-child(n + 2), h3.style3 
 	}
 	
 	#container16.columns > .wrapper > .inner > .full {
-		min-height: 22.5rem;
+		min-height: 16.5rem;
 	}
 	
 	#container16.columns > .wrapper > .inner > .full > .full:first-child:last-child {
@@ -4721,6 +4812,15 @@ h1.style3 span.p:nth-child(n + 2), h2.style3 span.p:nth-child(n + 2), h3.style3 
 		font-size: 2em;
 	}
 	
+	.buttons.style3 {
+		gap: 0rem;
+	}
+	
+	.buttons.style3 li a {
+		letter-spacing: 0rem;
+		font-size: 2.25em;
+	}
+	
 	#list03 {
 		letter-spacing: 0rem;
 		font-size: 1.5em;
@@ -4829,6 +4929,10 @@ h1.style3 span.p:nth-child(n + 2), h2.style3 span.p:nth-child(n + 2), h3.style3 
 		max-width: 32rem;
 		width: 100%;
 	}
+	
+	.buttons.style3 li a {
+		width: 30rem;
+	}
 }
 
 @media (max-width: 360px) {
@@ -4867,19 +4971,19 @@ h1.style3 span.p:nth-child(n + 2), h2.style3 span.p:nth-child(n + 2), h3.style3 
 	#container18 > .wrapper > .inner {
 		--gutters: 1.5rem;
 		--padding-horizontal: 1.5rem;
+		--padding-vertical: 0.75rem;
 	}
 	
 	#container01 > .wrapper > .inner {
 		--gutters: 1.5rem;
-		--padding-horizontal: 1.5rem;
 	}
 	
 	#container01 {
-		min-height: 8.5rem;
+		min-height: 7.5rem;
 	}
 	
 	#container01.columns > .wrapper > .inner > .full {
-		min-height: 8.5rem;
+		min-height: 7.5rem;
 	}
 	
 	#container16 > .wrapper > .inner {
@@ -4888,11 +4992,11 @@ h1.style3 span.p:nth-child(n + 2), h2.style3 span.p:nth-child(n + 2), h3.style3 
 	}
 	
 	#container16 {
-		min-height: 15rem;
+		min-height: 11rem;
 	}
 	
 	#container16.columns > .wrapper > .inner > .full {
-		min-height: 15rem;
+		min-height: 11rem;
 	}
 	
 	.container.style1 > .wrapper > .inner {
@@ -4999,6 +5103,10 @@ h1.style3 span.p:nth-child(n + 2), h2.style3 span.p:nth-child(n + 2), h3.style3 
 	}
 	
 	#buttons05 {
+		gap: 0rem;
+	}
+	
+	.buttons.style3 {
 		gap: 0rem;
 	}
 	
