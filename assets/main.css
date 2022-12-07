@@ -2772,6 +2772,28 @@ h1.style3 span.p:nth-child(n + 2), h2.style3 span.p:nth-child(n + 2), h3.style3 
 	margin-top: 1rem;
 }
 
+#text13 {
+	text-align: center;
+	color: #FFFFFF;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 1.125em;
+	line-height: 1.25;
+	font-weight: 700;
+	text-shadow: 0.063rem 0rem 0.25rem rgba(0,0,0,0.522);
+}
+
+#text13 a {
+	text-decoration: underline;
+}
+
+#text13 a:hover {
+	text-decoration: none;
+}
+
+#text13 span.p:nth-child(n + 2) {
+	margin-top: 1rem;
+}
+
 .buttons {
 	cursor: default;
 	display: flex;
@@ -2967,13 +2989,13 @@ h1.style3 span.p:nth-child(n + 2), h2.style3 span.p:nth-child(n + 2), h3.style3 
 .buttons.style3 li a {
 	display: inline-block;
 	width: 30rem;
-	height: 5rem;
-	line-height: 5rem;
+	height: 4.5rem;
+	line-height: 4.5rem;
 	padding: 0 0.5rem;
 	vertical-align: middle;
 	text-transform: uppercase;
 	font-family: 'Montserrat', sans-serif;
-	font-size: 2.25em;
+	font-size: 2em;
 	font-weight: 900;
 	border-radius: 1.25rem;
 	box-shadow: 0rem 1rem 2rem 0rem rgba(69,0,0,0.502);
@@ -4769,6 +4791,13 @@ h1.style3 span.p:nth-child(n + 2), h2.style3 span.p:nth-child(n + 2), h3.style3 
 		line-height: 1.375;
 	}
 	
+	#text13 {
+		letter-spacing: 0rem;
+		width: 100%;
+		font-size: 1.125em;
+		line-height: 1.25;
+	}
+	
 	.buttons.style2 {
 		gap: 0rem;
 	}
@@ -4818,7 +4847,7 @@ h1.style3 span.p:nth-child(n + 2), h2.style3 span.p:nth-child(n + 2), h3.style3 
 	
 	.buttons.style3 li a {
 		letter-spacing: 0rem;
-		font-size: 2.25em;
+		font-size: 2em;
 	}
 	
 	#list03 {
@@ -5092,6 +5121,10 @@ h1.style3 span.p:nth-child(n + 2), h2.style3 span.p:nth-child(n + 2), h3.style3 
 	
 	#text02 {
 		font-size: 1.25em;
+	}
+	
+	#text13 {
+		font-size: 1.125em;
 	}
 	
 	.buttons.style2 {
